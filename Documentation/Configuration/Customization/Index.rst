@@ -49,11 +49,12 @@ Create a new theme
 
 This is a recommendation how to set up your template structure for a custom extension.
 
-1. Set your base path in TypoScript constants:
+1. Set your private and public path in TypoScript constants:
 
 .. code-block:: typoscript
 
-   plugin.tx_cookieman.settings.resourcesBasePath = EXT:your_ext/Extensions/cookieman/Resources
+   plugin.tx_cookieman.settings.resourcesPrivatePath = EXT:your_ext/Resources/Private/Extensions/cookieman
+   plugin.tx_cookieman.settings.resourcesPublicPath = EXT:your_ext/Resources/Public/Extensions/cookieman
 
 
 2. Choose a new theme name:
@@ -63,13 +64,13 @@ This is a recommendation how to set up your template structure for a custom exte
    plugin.tx_cookieman.settings.theme = myTheme
 
 
-3. Create folder `EXT:your_ext/Extensions/cookieman/Resources/Private/Themes/myTheme/`.
+3. Create folder `EXT:your_ext/Resources/Private/Extensions/cookieman/Themes/myTheme/`.
    Add 3 folders: `Templates`, `Partials`, `Layouts`.
 
 4. These folders will have the highest priority when looking for templates, partials or layouts now.
    The fallback will be `EXT:cookieman/Resources/Private/*`.
 
-5. Create folder `EXT:your_ext/Extensions/cookieman/Resources/Public/Themes/myTheme`. This will hold the files `cookieman-theme(.min).css` and `cookieman-theme(.min).js`. Reimplement the methods cookieman.show() and cookieman.hide() in `cookieman-theme(.min).js`.
+5. Create folder `EXT:your_ext/Resources/Private/Extensions/cookieman/Themes/myTheme`. This will hold the files `cookieman-theme(.min).css` and `cookieman-theme(.min).js`. Reimplement the methods cookieman.show() and cookieman.hide() in `cookieman-theme(.min).js`.
 
 6. Copy the .css, .js and .html files as needed from a default theme.
 

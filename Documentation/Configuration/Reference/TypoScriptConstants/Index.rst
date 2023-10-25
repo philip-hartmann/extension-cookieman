@@ -13,19 +13,34 @@ Adjust the TypoScript constants (again, either in a sys_template record or in a 
 All constants are prepended with `plugin.tx_cookieman.settings`.
 
 
-.. _resourcesBasePath:
+.. _resourcesPrivatePath:
 
-resourcesBasePath
+resourcesPrivatePath
 ^^^^^^^^^^^^^^^^^
 .. rst-class:: dl-parameters
 
-resourcesBasePath
+resourcesPrivatePath
    :sep:`|` :aspect:`Data type:` :ref:`data-type-path`
-   :sep:`|` :aspect:`Default:` EXT:cookieman/Resources
-   :sep:`|` :aspect:`Example:` EXT:mysitepackage/Resources
+   :sep:`|` :aspect:`Default:` EXT:cookieman/Resources/Private
+   :sep:`|` :aspect:`Example:` EXT:mysitepackage/Resources/Private/Extensions/cookieman
    :sep:`|`
 
-   Path to directory that holds the themes. Default enables the shipped demo themes. See :ref:`customization` how to create a new theme.
+   Path to private directory that holds the themes. Default enables the shipped demo themes. See :ref:`customization` how to create a new theme.
+
+.. _resourcesPublicPath:
+
+resourcesPublicPath
+^^^^^^^^^^^^^^^^^
+.. rst-class:: dl-parameters
+
+resourcesPublicPath
+   :sep:`|` :aspect:`Data type:` :ref:`data-type-path`
+   :sep:`|` :aspect:`Default:` EXT:cookieman/Resources/Public
+   :sep:`|` :aspect:`Example:` EXT:mysitepackage/Resources/Public/Extensions/cookieman
+   :sep:`|`
+
+   Path to public directory that holds the themes. Default enables the shipped demo themes. See :ref:`customization` how to create a new theme.
+
 
 .. _theme:
 
@@ -39,7 +54,7 @@ theme
    :sep:`|` :aspect:`Example:` my-theme
    :sep:`|`
 
-   Name of the theme. It is used to extend the :ref:`resourcesBasePath` to create the full path to templates and assets.
+   Name of the theme. It is used to extend the :ref:`resourcesPrivatePath` and :ref:`resourcesPublicPath` to create the full path to templates and assets.
 
    The shipped default themes are these: `Themes directory on Github <https://github.com/dmind-gmbh/extension-cookieman/tree/master/Resources/Private/Themes>`__
 
